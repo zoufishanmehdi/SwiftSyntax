@@ -70,8 +70,28 @@ print(animalGroupsDict)
 //Retrieving the value for a particular key
 let groupOfWhales = animalGroupsDict["whales"]
 
+// We unwrap a value returned from a dictionary just like we would unwrap any other optional.
+if let groupOfWhales = animalGroupsDict["whales"] {
+    print("We saw a \(groupOfWhales) of whales from the boat.")
+} else {
+    print("No value found for that key.")
+}
 
 
+//: ## Sets
+//: Literal Syntax
+var cutlery: Set = ["fork", "knife", "spoon"]
+var flowers: Set<Character> = ["🌷","🌹","🌸"]
+//: Initializer syntax
+var utensils = Set<String>()
+var trees = Set<Character>()
+//: Set operations: Insert, Remove, Count
+trees.insert("🌲")
+trees.insert("🌳")
+trees.insert("🌵")
+
+trees.remove("🌵")
+trees.count
 
 
 
